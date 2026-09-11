@@ -1699,3 +1699,57 @@ a {
         transition-duration: 0.01ms !important;
     }
 }
+/* =========================
+   THEME VARIABLES
+========================= */
+
+:root {
+    --bg-color: #ffffff;
+    --text-color: #111827;
+    --card-color: #f8fafc;
+    --border-color: #e5e7eb;
+}
+
+html[data-theme="dark"] {
+    --bg-color: #0f172a;
+    --text-color: #f8fafc;
+    --card-color: #1e293b;
+    --border-color: #334155;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+/* Apply these variables to your main surfaces */
+.card,
+.section,
+.modal,
+.input-group {
+    background-color: var(--card-color);
+    border-color: var(--border-color);
+}
+
+.theme-toggle {
+    border: 1px solid var(--border-color);
+    background: var(--card-color);
+    color: var(--text-color);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theme-toggle:hover {
+    opacity: 0.85;
+}
+
+.theme-toggle:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 3px;
+}
